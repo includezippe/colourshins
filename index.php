@@ -1,4 +1,6 @@
-<?php header('Content-type: text/html; Charset=utf-8'); ?>
+<?php header('Content-type: text/html; Charset=utf-8');
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,10 +20,12 @@
 <div id="content">
     <?php
     define("Q_PATH",dirname(__FILE__));
-    include Q_PATH."/boot.php";
+ 
+
+   // include Q_PATH."/boot.php";
     echo Q_PATH;
-    require_once("logic/init.class.php"); 
-    new Init();
+    //require_once("logic/init.class.php");
+    //new Init();
 
     ?>
 </div>
