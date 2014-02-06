@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="colourshins" uploadOnCheckin="2747ad55-904e-4e1d-a3dc-113d478be6a5">
+    <serverData>
+      <paths name="colourshins">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/colourshins.ru/docs" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="colourshins" />
+  </component>
+</project>
+
