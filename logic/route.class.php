@@ -12,7 +12,7 @@ class Route {
     }
 
     public static function Start() {
-        $controller_name = 'main';
+        $controller_name = 'index';
         $action_name = 'NULL';
         $action_parameters = array();
 
