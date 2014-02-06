@@ -1,0 +1,1 @@
+<font style="display:block;text-align: center;" color="#e74c3c" size="10em">Страница не найдена</font>
