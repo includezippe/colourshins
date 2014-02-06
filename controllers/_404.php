@@ -6,7 +6,7 @@
  * Time: 21:54
  */
 
-class Controller_404 extends Controller {
+class _404 extends Controller {
 
     function __construct() {
 

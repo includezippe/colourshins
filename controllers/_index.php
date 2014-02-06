@@ -6,7 +6,7 @@
  * Time: 22:02
  */
 
-class Controller_404 extends Controller {
+class _index extends Controller {
 
     function __construct() {
 
