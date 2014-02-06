@@ -16,7 +16,7 @@
 <img src="/img/logobg.jpg" id="bg">
 <div id="content">
     <?php
-        include Q_PATH.'/application/views/_'.$view.'.php';
+        include Q_PATH.'/view/_'.$view.'.php';
     ?>
 </div>
 </body>
