@@ -28,7 +28,7 @@ class Route {
 
         $model_name = '_' . $controller_name;
         $controller_name = '_' . $controller_name;
-        $action_name = '_' . $action_name;
+        $action_name = 'action_' . $action_name;
 
 
 

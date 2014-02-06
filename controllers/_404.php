@@ -12,7 +12,7 @@ class _404 extends Controller {
 
     }
 
-    public function Action_index() {
+    public function action_index() {
         $view = new View();
         $view->generate('404');
     }
