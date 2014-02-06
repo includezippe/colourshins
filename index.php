@@ -21,6 +21,7 @@
     require_once("logic/init.class.php");
     new Init();
 
+    echo 'Simple string!';
     ?>
 </div>
 </body>
