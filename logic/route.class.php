@@ -13,7 +13,7 @@ class Route {
 
     public static function Start() {
         $controller_name = 'index';
-        $action_name = 'NULL';
+        $action_name = 'index';
         $action_parameters = array();
 
         $route_array = explode('/', $_SERVER['REQUEST_URI']);
