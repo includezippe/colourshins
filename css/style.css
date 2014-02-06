@@ -57,6 +57,7 @@ body {
     margin-left:215px;
 }
 #content {
+    padding: 15px 25px;
     background: #f7fbff;
     z-index: 100;
     position: absolute;
