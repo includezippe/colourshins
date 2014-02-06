@@ -1,4 +1,11 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: dmitrijdorozkin
+ * Date: 06.02.14
+ * Time: 21:36
+ */
+
 class Init {
     private function _getPages() {
         $url = !isset($_GET['url']) ? "main" : $_GET['url'];
