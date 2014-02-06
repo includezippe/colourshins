@@ -1,6 +1,5 @@
 <?php
 class Init {
-
     private function _getPages() {
         $url = !isset($_GET['url']) ? "main" : $_GET['url'];
         $url = rtrim($url,"/");
