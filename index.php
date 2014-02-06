@@ -17,8 +17,10 @@
 <img src="/img/logobg.jpg" id="bg">
 <div id="content">
     <?php
-
-    require_once("logic/init.class.php");
+    define("Q_PATH",dirname(__FILE__));
+    include Q_PATH."/boot.php";
+    echo Q_PATH;
+    require_once("logic/init.class.php"); 
     new Init();
 
     ?>
