@@ -12,7 +12,7 @@ class _index extends Controller {
 
     }
 
-    public function Action_index() {
+    public function _index() {
         $view = new View();
         $view->generate('index');
     }
