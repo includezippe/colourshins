@@ -1,3 +1,4 @@
+index
 <?php
 /**
  * Created by PhpStorm.
