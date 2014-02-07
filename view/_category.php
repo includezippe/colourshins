@@ -1,12 +1,18 @@
 <?php
+/*echo '<pre>';
+var_dump($data); // For debuging
+echo '</pre>';*/
+
 foreach ($data as $value) {
 	echo '
 		<div>
 			<h3>'.$value['id'].'.'.$value['name'].'</h3>
-			<br>
-			<span>Диаметр: '.$value['caliber'].'мм</span>
-			<br>
-			<span>Номер категории категории: id.'.$value['cat_id'].'</span>
+			<img src="'.$value['img'].'" style="width: 100px;">
+			<div>
+				<span>Диаметр: '.$value['caliber'].'мм</span>
+				<br>
+				<span>Производитель: '.$value[0]['name'].'</span>
+			</div>
 		</div>
 	';
 }
