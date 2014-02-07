@@ -1,7 +1,7 @@
 <?php
-/*echo '<pre>';
+echo '<pre>';
 var_dump($data); // For debuging
-echo '</pre>';*/
+echo '</pre>';/*
 
 echo $_SERVER['REQUEST_URI'];
 
@@ -17,4 +17,4 @@ foreach ($data as $value) {
 			</div>
 		</div>
 	';
-}
+}*/

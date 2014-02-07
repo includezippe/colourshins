@@ -16,6 +16,7 @@ class Route {
 		$action_name = 'index';
 		$action_parameters = array();
 
+
 		$route_array = explode('/', $_SERVER['REQUEST_URI']);
 
 		if(!empty($route_array[1])) {
@@ -46,7 +47,7 @@ class Route {
 
 		$controller = new $controller_name();
 		
-		if(method_exists($controller,$action_name)){
+		if(method_exists($controller, $action_name)){
 			$controller->$action_name();
 		}
 		else{
