@@ -3,6 +3,8 @@
 var_dump($data); // For debuging
 echo '</pre>';*/
 
+echo $_SERVER['REQUEST_URI'];
+
 foreach ($data as $value) {
 	echo '
 		<div>

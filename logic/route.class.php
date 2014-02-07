@@ -7,45 +7,53 @@
  */
 class Route {
 
-    function __construct() {
+	function __construct() {
 
-    }
+	}
 
-    public static function Start() {
-        $controller_name = 'index';
-        $action_name = 'index';
-        $action_parameters = array();
+	public static function Start() {
+		$controller_name = 'index';
+		$action_name = 'index';
+		$action_parameters = array();
 
-        $route_array = explode('/', $_SERVER['REQUEST_URI']);
+		$route_array = explode('/', $_SERVER['REQUEST_URI']);
 
-        if(!empty($route_array[1])) {
-            $controller_name = $route_array[1];
-        }
+		if(!empty($route_array[1])) {
+			$controller_name = $route_array[1];
+		}
 
-        if(!empty($route_array[2])) {
-            $action_name = $route_array[2];
-        }
+		if(!empty($route_array[2])) {
+			$action_name = $route_array[2];
+		}
 
-        $model_name = '_' . $controller_name;
-        $controller_name = '_' . $controller_name;
-        $action_name = 'action_' . $action_name;
+		$model_name = '_' . $controller_name;
+		$controller_name = '_' . $controller_name;
+		$action_name = 'action_' . $action_name;
 
 
 
-        if(file_exists(Q_PATH.'/models/'.$model_name.'.php')) {
-            include Q_PATH.'/models/'.$model_name.'.php';
-        }
+		if(file_exists(Q_PATH.'/models/'.$model_name.'.php')) {
+			include Q_PATH.'/models/'.$model_name.'.php';
+		}
 
-        if(file_exists(Q_PATH.'/controllers/'.$controller_name.'.php')) {
-            include Q_PATH.'/controllers/'.$controller_name.'.php';
-        }
-        else {
-            header('Location: /404');
-            exit;
-        }
+		if(file_exists(Q_PATH.'/controllers/'.$controller_name.'.php')) {
+			include Q_PATH.'/controllers/'.$controller_name.'.php';
+		}
+		else {
+			header('Location: /404');
+			exit;
+		}
 
-        $controller = new $controller_name();
-        $controller->$action_name();
-    }
+		$controller = new $controller_name();
+		
+		if(method_exists($controller,$action_name)){
+			$controller->$action_name();
+		}
+		else{
+			$action_name = 'action_index';
+			$controller->$action_name();
+		}
+		
+	}
 
 }

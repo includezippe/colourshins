@@ -16,4 +16,8 @@ class _category {
 
 		$view->generate('category', $res);
 	}
+
+	function action_filter(){
+		
+	}
 }
