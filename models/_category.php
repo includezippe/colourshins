@@ -7,25 +7,24 @@ class Model_category extends Model {
 	}
 
 	public function getCategoryName($cat_id){
-		$values = array(
-			array(
-				'id' => '1',
-				'name' => 'Yamaha'
-			),
-			array(
-				'id' => '2',
-				'name' => 'Honda'
-			)
-		);
+		$db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $db->exec('SET NAMES utf8');
 
-		$cat_id = $cat_id - 1;
+		$values = $db->query('SELECT * FROM `categories` WHERE `id` = "'.$cat_id.'"');
 
-		return $values[$cat_id];
+		$values = $values->fetchAll();
+
+		$values = $values[0]['name'];
+
+		return $values;
 	}
 
 
-	public function getList(){
-		
+	public function getList($cat_id){
+		$db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $db->exec('SET NAMES utf8');
+
+		$values = $db->query('SELECT * FROM `store` WHERE `cat_id` = "'.$cat_id.'"');
+
+		$values = $values->fetchAll();
 
 		return $values;
 	}

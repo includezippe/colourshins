@@ -2,26 +2,31 @@
 
 class _category {
 	function action_index(){
-		$this->action_page();
-	}
+		$cat_id = 1;
+		$page = 1;
 
-	function action_page($page=1){
 		$route_array = explode('/', $_SERVER['REQUEST_URI']);
+		if(intval($route_array[2]) > 0){
+			$cat_id = intval($route_array[2]);
+		}
 		if(intval($route_array[3]) > 0){
 			$page = intval($route_array[3]);
 		}
 
 		$view = new View();
 		$content = new Model_category();
-		$db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $db->exec('SET NAMES utf8');
 
-		$db->query('SELECT * FROM `store` WHERE `cat_id` = "1"');
+		$list = $content->getList($cat_id);
+
+		$cat_name = $content->getCategoryName($cat_id);
 
 		$res = array(
-			'page' => $page
+			'page' => $page,
+			'list' => $list,
+			'cat_name' => $cat_name
 		);
 
 		$view->generate('category', $res);
-
 	}
+
 }
