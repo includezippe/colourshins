@@ -9,7 +9,7 @@
 /*echo $_SERVER['REQUEST_URI'];*/
 
 foreach ($data['list'] as $invalue) {
-
+	
 	echo '
 	<div>
 		<h3>'.$invalue['id'].'.'.$invalue['name'].'</h3>

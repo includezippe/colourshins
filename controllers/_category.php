@@ -16,17 +16,23 @@ class _category {
 		$view = new View();
 		$content = new Model_category();
 
-		$list = $content->getList($cat_id);
+		if($content->issetStore($cat_id)){
+			$list = $content->getList($cat_id, $page);
 
-		$cat_name = $content->getCategoryName($cat_id);
+			$cat_name = $content->getCategoryName($cat_id);
 
-		$res = array(
-			'page' => $page,
-			'list' => $list,
-			'cat_name' => $cat_name
-		);
+			$res = array(
+				'page' => $page,
+				'list' => $list,
+				'cat_name' => $cat_name
+			);
 
-		$view->generate('category', $res);
+			$view->generate('category', $res);
+		}
+		else{
+			header('Location: /404');
+		}
+		
 	}
 
 }
