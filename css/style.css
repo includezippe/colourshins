@@ -25,6 +25,7 @@ body {
 }
 
 .menubg {
+    opacity: 0.5;
     position: fixed;
     top: 0px;
     width: 1400px;
