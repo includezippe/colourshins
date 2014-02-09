@@ -9,7 +9,7 @@
 /*echo $_SERVER['REQUEST_URI'];*/
 
 foreach ($data['list'] as $invalue) {
-	
+
 	echo '
 	<div>
 		<h3>'.$invalue['id'].'.'.$invalue['name'].'</h3>
@@ -24,9 +24,22 @@ foreach ($data['list'] as $invalue) {
 
 }
 
+echo '<p>';
+for ($page = 1; $page <= $data['num_pages']; $page++){
+
+	if ($page == $data['page']){
+		echo '<strong>'.$page.'</strong> &nbsp;';
+	}
+	else{
+		echo '<a href="http://'.WWW.'/category/'.$data['cat_id'].'/'.$page.'">'.$page.'</a> &nbsp;';
+	}
+
+}
+echo '</p>';
+
 /*
 echo '<pre>';
 var_dump($data); // For debuging
-echo '</pre>';*/
-
+echo '</pre>';
+*/
 ?>

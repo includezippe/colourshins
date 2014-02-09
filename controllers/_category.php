@@ -21,10 +21,14 @@ class _category {
 
 			$cat_name = $content->getCategoryName($cat_id);
 
+			$num_pages = $content->getNumPages($cat_id);
+
 			$res = array(
-				'page' => $page,
 				'list' => $list,
-				'cat_name' => $cat_name
+				'cat_name' => $cat_name,
+				'cat_id' => $cat_id,
+				'page' => $page,
+				'num_pages' => $num_pages
 			);
 
 			$view->generate('category', $res);
