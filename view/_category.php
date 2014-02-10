@@ -1,7 +1,7 @@
 <ul style="list-style: none;">
-	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/1">Категория 1</a></li>
-	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/2">Категория 2</a></li>
-	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/3">Категория 3</a></li>
+	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/1/1/">Категория 1</a></li>
+	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/2/1/">Категория 2</a></li>
+	<li style="list-style: none;"><a href="http://<?php echo WWW;?>/category/3/1/">Категория 3</a></li>
 </ul>
 
 <?php
@@ -31,7 +31,7 @@ for ($page = 1; $page <= $data['num_pages']; $page++){
 		echo '<strong>'.$page.'</strong> &nbsp;';
 	}
 	else{
-		echo '<a href="http://'.WWW.'/category/'.$data['cat_id'].'/'.$page.'">'.$page.'</a> &nbsp;';
+		echo '<a href="http://'.WWW.'/category/'.$data['cat_id'].'/'.$page.'/">'.$page.'</a> &nbsp;';
 	}
 
 }
