@@ -13,8 +13,8 @@ class _category {
 		if(intval($route_array[3]) > 0){
 			$page = intval($route_array[3]);
 		}
-		if(isset($route_array[4]) && $route_array[4] != ''){
-			$season = mysql_escape_string($route_array[4]);
+		if(isset($route_array[4]) && $route_array[4] != ''){ 
+			$season =  mysql_real_escape_string($route_array[4]);
 		}
 
 		$view = new View();
