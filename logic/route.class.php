@@ -52,17 +52,5 @@ class Route {
 			header('Location: /404');
 			exit;
 		}
-
-		$controller = new $controller_name();
-		
-		if(method_exists($controller, $action_name)){
-			$controller->$action_name();
-		}
-		else{
-			//$action_name = 'action_index';
-			$controller->$action_name();
-		}
-		
 	}
-
 }
