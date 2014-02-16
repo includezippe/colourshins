@@ -18,6 +18,8 @@ body {
 .shine {
     background: url("/img/shine.jpg") no-repeat #FFF;
     width: 392px;
+    position: absolute;
+    left: 0px;
     height: 564px;
 }
 
