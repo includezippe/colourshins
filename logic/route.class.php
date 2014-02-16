@@ -6,7 +6,6 @@
  * Time: 21:36
  */
 class Route {
-
 	function __construct() {
 
 	}

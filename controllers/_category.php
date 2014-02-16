@@ -1,12 +1,12 @@
 <?php
 
-class _category {
+class _category extends Controller {
 	function action_index(){
 		$cat_id = 1;
 		$page = 1;
 		$season = false;
-
-		$route_array = explode('/', $_SERVER['REQUEST_URI']);
+        $route_array = explode('/', $_SERVER['REQUEST_URI']);
+        
 		if(intval($route_array[2]) > 0){
 			$cat_id = intval($route_array[2]);
 		}
