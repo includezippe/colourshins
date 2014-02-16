@@ -32,7 +32,7 @@ class Route {
         }
 
         if(isset($route_array[4]) && $route_array[4] != ''){
-            $season =  mysql_escape_string($route_array[4]);
+            $season =  mysql_real_escape_string($route_array[4]);
         }
 
 		$model_name = '_' . $controller_name;
@@ -52,5 +52,17 @@ class Route {
 			header('Location: /404');
 			exit;
 		}
+
+		$controller = new $controller_name();
+		
+		if(method_exists($controller, $action_name)){
+			$controller->$action_name();
+		}
+		else{
+			//$action_name = 'action_index';
+			$controller->$action_name();
+		}
+		
 	}
+
 }

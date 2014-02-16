@@ -2,6 +2,11 @@
 
 class Model_category extends Model {
 	private $subjects_on_page = 5;
+	private $_db;
+
+	function __construct() {
+		$this->_db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $this->_db->exec('SET NAMES utf8');
+	}
 
 	/**
 	 * Возвращает истину если категория сущетсвует, и на оборот
@@ -35,6 +40,8 @@ class Model_category extends Model {
 	 */
 
 	public function getCategoryName($cat_id){
+		$this->_db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $this->_db->exec('SET NAMES utf8');
+
 		$values = $this->_db->query('SELECT * FROM `categories` WHERE `id` = "'.$cat_id.'"'); $values = $values->fetchAll();
 
 		$values = $values[0]['name'];
@@ -48,6 +55,7 @@ class Model_category extends Model {
 	 */
 
 	public function getList($cat_id, $page, $season){
+		$this->_db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $this->_db->exec('SET NAMES utf8');
 
 		if($season === false){
 			$sql = 'SELECT COUNT(`id`) FROM `store` WHERE `cat_id` = "'.$cat_id.'"';
@@ -93,6 +101,8 @@ class Model_category extends Model {
 	 */
 
 	public function getNumPages($cat_id, $season){
+		$this->_db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $this->_db->exec('SET NAMES utf8');
+
 		if($season === false){
 			$sql = 'SELECT COUNT(`id`) FROM `store` WHERE `cat_id` = "'.$cat_id.'"';
 		}

@@ -1,11 +1,21 @@
 <?php
 
-class _category extends Controller {
+class _category {
 	function action_index(){
 		$cat_id = 1;
 		$page = 1;
 		$season = false;
 
+		$route_array = explode('/', $_SERVER['REQUEST_URI']);
+		if(intval($route_array[2]) > 0){
+			$cat_id = intval($route_array[2]);
+		}
+		if(intval($route_array[3]) > 0){
+			$page = intval($route_array[3]);
+		}
+		if(isset($route_array[4]) && $route_array[4] != ''){ 
+			$season =  mysql_real_escape_string($route_array[4]);
+		}
 
 		$view = new View();
 		$content = new Model_category();

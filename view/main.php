@@ -11,7 +11,7 @@
 <body onresize="resize()" onload="resize()">
 <img src="/img/menu.png" class="menubg">
 <div id="menu">
-    <a href="#" class="links">главная</a><a href="#" class="links">доставка</a><a href="#" class="links">калькулятор</a><a href="#" class="links">помощь</a></div>
+    <a href="#" class="links">каталог</a><a href="#" class="links">доставка</a><a href="#" class="links">калькулятор</a><a href="#" class="links">помощь</a></div>
 <img src="/img/head.png" class="logo">
 <img src="/img/logobg.jpg" id="bg">
 <div id="content">
