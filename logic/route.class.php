@@ -13,8 +13,8 @@ class Route {
 
 	public static function Start() {
 		$controller_name = 'index';
-		$action_name = 'index';
-		$action_parameters = array();
+		//$action_name = 'index';
+		//$action_parameters = array();
 
 
 		$route_array = explode('/', $_SERVER['REQUEST_URI']);
@@ -23,13 +23,21 @@ class Route {
 			$controller_name = $route_array[1];
 		}
 
-		if(!empty($route_array[2])) {
-			$action_name = $route_array[2];
-		}
+        if(isset($route_array[2]) and (intval($route_array[2]) > 0)){
+            $cat_id = intval($route_array[2]);
+        }
+
+        if(isset($route_array[3]) and (intval($route_array[3]) > 0)){
+            $page = intval($route_array[3]);
+        }
+
+        if(isset($route_array[4]) && $route_array[4] != ''){
+            $season =  mysql_real_escape_string($route_array[4]);
+        }
 
 		$model_name = '_' . $controller_name;
 		$controller_name = '_' . $controller_name;
-		$action_name = 'action_' . $action_name;
+		//$action_name = 'action_' . $action_name;
 
 
 
@@ -51,7 +59,7 @@ class Route {
 			$controller->$action_name();
 		}
 		else{
-			$action_name = 'action_index';
+			//$action_name = 'action_index';
 			$controller->$action_name();
 		}
 		

@@ -7,9 +7,10 @@
  */
 
 class Model {
+    public $_db;
 
-function __construct() {
-
-}
+    function __construct() {
+        $this->_db = new PDO('mysql:host=colourshin.mysql;dbname=colourshin_db', 'colourshin_main', 'hrgmdjnd'); $this->_db->exec('SET NAMES utf8');
+    }
 
 }
