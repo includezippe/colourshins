@@ -2,8 +2,18 @@ body {
     background: #f7fbff;
     padding: 0px;
     font-family: Tahoma;
-    margin: 0px;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
 }
+
+* {
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
 .logo {
     width: 1400px;
     margin-left:-700px;
@@ -15,13 +25,71 @@ body {
 
 }
 
+
 .shine {
-    background: url("/img/shine.jpg") no-repeat #FFF;
-    width: 392px;
-    position: absolute;
-    left: 0px;
-    height: 564px;
+    width: 150px;
+    background: white;
+    border-radius: 75px;
+    display: inline-block;
+    z-index: 50;
+    position: relative;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    margin-left: 30px;
+    margin-top: 40px;
+
 }
+
+.index_i1 {
+    background: #6d8ba8;
+    color: #f7fbff;
+    width: 150px;
+    height: 231px;
+    position: absolute;
+    display: inline-block;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+.index_i2 {
+    background: #34495e;
+    color: #f7fbff;
+    padding: 30px;
+    padding-left: 100px;
+    padding-bottom: 0px;
+    z-index: 10;
+    position: absolute;
+    width: 845px;
+    height: 201px;
+    display: inline-block;
+    letter-spacing: 0px;
+    margin: 0px;
+    word-spacing: 0px;
+    margin-left:-80px;
+}
+
+.index_i3 {
+    width: 245px;
+    height: 231px;
+    float:right;
+    display: inline-block;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+}
+
+.cat {
+    padding: 15px;
+    display: block;
+    background: #6d8ba8;
+    color: #f7fbff;
+    cursor: pointer;cursor: hand;
+    margin-bottom: 5px;
+}
+.cat:hover {
+    color: #34495e;
+}
+
+
 
 #bg {
     position: fixed;
@@ -80,3 +148,11 @@ a {
     color: #6b7a93;
     text-decoration: none;
 }
+
+h3 {
+    line-height: 1em;
+    margin: 0px 0px 15px 0px;
+    font-size: 1.1em;
+    color: #34495e;
+}
+
