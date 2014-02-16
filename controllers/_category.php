@@ -6,11 +6,11 @@ class _category extends Controller {
 		$page = 1;
 		$season = false;
         $route_array = explode('/', $_SERVER['REQUEST_URI']);
-        
-		if(intval($route_array[2]) > 0){
+
+		if(isset($route_array[2]) and (intval($route_array[2]) > 0)){
 			$cat_id = intval($route_array[2]);
 		}
-		if(intval($route_array[3]) > 0){
+		if(isset($route_array[3]) and (intval($route_array[3]) > 0)){
 			$page = intval($route_array[3]);
 		}
 		if(isset($route_array[4]) && $route_array[4] != ''){ 
