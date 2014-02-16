@@ -13,8 +13,8 @@ class Route {
 
 	public static function Start() {
 		$controller_name = 'index';
-		//$action_name = 'index';
-		//$action_parameters = array();
+		$action_name = 'index';
+	    $action_parameters = array();
 
 
 		$route_array = explode('/', $_SERVER['REQUEST_URI']);
@@ -37,7 +37,7 @@ class Route {
 
 		$model_name = '_' . $controller_name;
 		$controller_name = '_' . $controller_name;
-		//$action_name = 'action_' . $action_name;
+		$action_name = 'action_' . $action_name;
 
 
 
@@ -59,7 +59,7 @@ class Route {
 			$controller->$action_name();
 		}
 		else{
-			//$action_name = 'action_index';
+			$action_name = 'action_index';
 			$controller->$action_name();
 		}
 		
