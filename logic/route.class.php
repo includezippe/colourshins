@@ -32,7 +32,7 @@ class Route {
         }
 
         if(isset($route_array[4]) && $route_array[4] != ''){
-            $season =  mysql_real_escape_string($route_array[4]);
+            $season =  mysql_escape_string($route_array[4]);
         }
 
 		$model_name = '_' . $controller_name;
