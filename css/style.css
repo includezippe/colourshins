@@ -15,6 +15,12 @@ body {
 
 }
 
+.shine {
+    background: url("/img/shine.jpg") no-repeat #FFF;
+    width: 392px;
+    height: 564px;
+}
+
 #bg {
     position: fixed;
     z-index: 10;
